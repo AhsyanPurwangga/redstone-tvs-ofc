@@ -8,6 +8,7 @@ import { createServer as createViteServer, createLogger } from "vite";
 
 import viteConfig from "../vite.config";
 import runApp from "./app";
+import { startTvsBot } from "./discord/bot";
 
 export async function setupVite(app: Express, server: Server) {
   const viteLogger = createLogger();
@@ -60,4 +61,7 @@ export async function setupVite(app: Express, server: Server) {
 
 (async () => {
   await runApp(setupVite);
+  
+  // Start the Discord TVS bot
+  await startTvsBot();
 })();
