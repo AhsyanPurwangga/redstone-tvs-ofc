@@ -66,7 +66,7 @@ export async function startTvsBot(): Promise<void> {
 }
 
 export async function stopTvsBot(): Promise<void> {
-  console.log('🛑 Stopping RedStone TVS Bot...');
+  console.log('Stopping RedStone TVS Bot...');
   
   if (updateTask) {
     updateTask.stop();

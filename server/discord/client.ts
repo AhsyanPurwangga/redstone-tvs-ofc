@@ -37,7 +37,7 @@ export async function updateBotPresence(tvsFormatted: string): Promise<void> {
     
     await client.user?.setPresence({
       activities: [{
-        name: `🔴 TVS: ${tvsFormatted} | RedStone Oracle`,
+        name: `RedStone TVS: ${tvsFormatted}`,
         type: ActivityType.Watching
       }],
       status: 'online'
